@@ -115,7 +115,6 @@ class StatusPageController extends AbstractApiController
         }, SORT_REGULAR, true)->all();
 
         return View::make('index')
-            ->withActions(TimedAction::active()->get())
             ->withDaysToShow($daysToShow)
             ->withAllIncidents($allIncidents)
             ->withCanPageForward((bool) $today->gt($startDate))
