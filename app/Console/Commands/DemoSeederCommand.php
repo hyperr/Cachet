@@ -106,10 +106,12 @@ class DemoSeederCommand extends Command
                 'name'      => 'Websites',
                 'order'     => 1,
                 'collapsed' => 0,
+                'visible'   => ComponentGroup::VISIBLE_AUTHENTICATED,
             ], [
                 'name'      => 'Alt Three',
                 'order'     => 2,
                 'collapsed' => 1,
+                'visible'   => ComponentGroup::VISIBLE_GUEST,
             ],
         ];
 
@@ -205,6 +207,7 @@ EINCIDENT;
                 'component_id' => 0,
                 'scheduled_at' => null,
                 'visible'      => 1,
+                'stickied'     => false,
             ],
             [
                 'name'         => 'Awesome',
@@ -213,6 +216,7 @@ EINCIDENT;
                 'component_id' => 0,
                 'scheduled_at' => null,
                 'visible'      => 1,
+                'stickied'     => false,
             ],
             [
                 'name'         => 'Monitoring the fix',
@@ -221,6 +225,7 @@ EINCIDENT;
                 'component_id' => 0,
                 'scheduled_at' => null,
                 'visible'      => 1,
+                'stickied'     => false,
             ],
             [
                 'name'         => 'Update',
@@ -229,6 +234,7 @@ EINCIDENT;
                 'component_id' => 0,
                 'scheduled_at' => null,
                 'visible'      => 1,
+                'stickied'     => false,
             ],
             [
                 'name'         => 'Test Incident',
@@ -237,6 +243,7 @@ EINCIDENT;
                 'component_id' => 0,
                 'scheduled_at' => null,
                 'visible'      => 1,
+                'stickied'     => false,
             ],
             [
                 'name'         => 'Investigating the API',
@@ -245,6 +252,16 @@ EINCIDENT;
                 'component_id' => 1,
                 'scheduled_at' => null,
                 'visible'      => 1,
+                'stickied'     => false,
+            ],
+            [
+                'name'         => 'Sticked incidents!',
+                'message'      => 'Need to continually notify your customers of an incident? You can stick incidents to the top!',
+                'status'       => 1,
+                'component_id' => 1,
+                'scheduled_at' => null,
+                'visible'      => 1,
+                'stickied'     => true,
             ],
         ];
 
